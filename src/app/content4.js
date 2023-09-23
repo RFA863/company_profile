@@ -18,17 +18,18 @@ export default function Content() {
         infiniteLoop={true}
         interval={3000}
         showStatus={false}
+        showThumbs={false}
         // renderArrowNext={nextArrow}
         // renderArrowPrev={prevArrow}
       >
         <div>
-          <Image src={Content4_1} className="sm:w-screen sm:h-screen" />
+          <Image src={Content4_1} className="sm:w-screen sm:h-screen  " />
         </div>
         <div>
-          <Image src={Content3} className="sm:w-screen sm:h-screen" />
+          <Image src={Content3} className="sm:w-screen sm:h-screen " />
         </div>
         <div>
-          <Image src={Content3} className="sm:w-screen sm:h-screen" />
+          <Image src={Content3} className="sm:w-screen sm:h-screen " />
         </div>
       </Carousel>
     </>
