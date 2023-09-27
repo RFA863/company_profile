@@ -1,4 +1,4 @@
-import Hiring from "./aboutUs/Hiring";
+import Hiring from "./Hiring";
 
 export default function RootLayout({ children }) {
   return (

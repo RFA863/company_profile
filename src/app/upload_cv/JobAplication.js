@@ -1,10 +1,6 @@
-"use client";
-
-import Link from "next/link";
-import { useState } from "react";
 import CreatableSelect from "react-select/creatable";
 
-export default function JobAplication() {
+export default function JobAplication(props) {
   const options = [
     { value: "1 >", label: "1 year less" },
     { value: "1-2", label: "1 - 2 year" },
@@ -13,52 +9,27 @@ export default function JobAplication() {
     { value: "5 <", label: "5 years more" },
   ];
 
-  const [dataToSend, setDataToSend] = useState({
-    experience: "", // Inisialisasi dengan nilai kosong
-    tools_knowledge: "", // Inisialisasi dengan nilai kosong
-    specialist: "",
-  });
+  const validator = () => {
+    const isValid = props.validator(); // Panggil validator pada parent
 
-  const handleTextChange = (e) => {
-    const { name, value } = e.target;
-    setDataToSend((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    if (isValid) {
+      props.nextPage(); // Panggil nextPage jika validasi berhasil
+    }
   };
 
   const handleSelectChange = (selectedOption) => {
-    setDataToSend((prevData) => ({
-      ...prevData,
-      experience: selectedOption ? selectedOption.value : "", // Memperbarui nilai experience dari selectedOption
-    }));
+    props.changeSelect(selectedOption);
   };
 
-  const handleCheckboxChange = (e) => {
-    const { id, checked } = e.target;
-    const specialistArray = [...dataToSend.specialist.split(",")];
-
-    if (checked) {
-      specialistArray.push(id);
-    } else {
-      const index = specialistArray.indexOf(id);
-      if (index !== -1) {
-        specialistArray.splice(index, 1);
-      }
-    }
-
-    const specialistString = specialistArray.join(",");
-
-    setDataToSend((prevData) => ({
-      ...prevData,
-      specialist: specialistString,
-    }));
+  const handleCheckboxChange = (id, checked) => {
+    props.changeCheckbox(id, checked);
   };
-  const handleNextButtonClick = () => {
-    // Menyimpan data ke sessionStorage sebelum navigasi ke halaman selanjutnya
-    sessionStorage.setItem("userData", JSON.stringify(dataToSend));
+
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    props.changeInput(name, value, type, checked);
   };
-  console.log(dataToSend);
+
   return (
     <div className="w-[135%]   ml-20  text-[#4D4D4D] ">
       <div className="mt-10 mb-2 font-black text-lg">2 of 3 Completed</div>
@@ -75,10 +46,11 @@ export default function JobAplication() {
           isClearable
           options={options}
           placeholder="1 - 2 years"
-          onChange={handleSelectChange}
           value={options.find(
-            (option) => option.value === dataToSend.experience
+            (option) => option.value === props.formData.experience
           )}
+          onChange={handleSelectChange}
+          required
         />
 
         <div className="font-medium my-8 text-2xl">
@@ -90,9 +62,14 @@ export default function JobAplication() {
             <input
               type="checkbox"
               id="packagingSpecialist"
-              checked={dataToSend.specialist.includes("packagingSpecialist")}
-              onChange={handleCheckboxChange}
+              checked={props.formData.specialist.includes(
+                "packagingSpecialist"
+              )}
+              onChange={(e) =>
+                handleCheckboxChange("packagingSpecialist", e.target.checked)
+              }
               className="w-8 h-8 bg-[#FF6600] border rounded-md focus:ring-0"
+              required
             />
             <label htmlFor="packagingSpecialist" className="pl-4">
               Packaging Design Specialist
@@ -103,11 +80,17 @@ export default function JobAplication() {
             <input
               type="checkbox"
               id="qualityControlInspector"
-              checked={dataToSend.specialist.includes(
+              checked={props.formData.specialist.includes(
                 "qualityControlInspector"
               )}
-              onChange={handleCheckboxChange}
+              onChange={(e) =>
+                handleCheckboxChange(
+                  "qualityControlInspector",
+                  e.target.checked
+                )
+              }
               className="w-8 h-8 bg-[#FF6600] border rounded-md focus:ring-0"
+              required
             />
             <label htmlFor="qualityControlInspector" className="pl-4">
               Quality Control Inspector
@@ -118,9 +101,12 @@ export default function JobAplication() {
             <input
               type="checkbox"
               id="salesManager"
-              checked={dataToSend.specialist.includes("salesManager")}
-              onChange={handleCheckboxChange}
+              checked={props.formData.specialist.includes("salesManager")}
+              onChange={(e) =>
+                handleCheckboxChange("salesManager", e.target.checked)
+              }
               className="w-8 h-8 bg-[#FF6600] border rounded-md focus:ring-0"
+              required
             />
             <label htmlFor="salesManager" className="pl-4">
               Sales and Business Development Manager
@@ -131,9 +117,14 @@ export default function JobAplication() {
             <input
               type="checkbox"
               id="productionSupervisor"
-              checked={dataToSend.specialist.includes("productionSupervisor")}
-              onChange={handleCheckboxChange}
+              checked={props.formData.specialist.includes(
+                "productionSupervisor"
+              )}
+              onChange={(e) =>
+                handleCheckboxChange("productionSupervisor", e.target.checked)
+              }
               className="w-8 h-8 bg-[#FF6600] border rounded-md focus:ring-0"
+              required
             />
             <label htmlFor="productionSupervisor" className="pl-4">
               Production Line Supervisor
@@ -144,9 +135,12 @@ export default function JobAplication() {
             <input
               type="checkbox"
               id="supplyCoordinator"
-              checked={dataToSend.specialist.includes("supplyCoordinator")}
-              onChange={handleCheckboxChange}
+              checked={props.formData.specialist.includes("supplyCoordinator")}
+              onChange={(e) =>
+                handleCheckboxChange("supplyCoordinator", e.target.checked)
+              }
               className="w-8 h-8 bg-[#FF6600] border rounded-md focus:ring-0"
+              required
             />
             <label htmlFor="supplyCoordinator" className="pl-4">
               Supply Chain Coordinator
@@ -161,19 +155,18 @@ export default function JobAplication() {
           name="tools_knowledge"
           placeholder="Ex. Quality Control.."
           className="w-full rounded-md"
-          value={dataToSend.tools_knowledge}
-          onChange={handleTextChange}
+          value={props.formData.tools_knowledge}
+          onChange={handleInputChange}
+          required
         />
       </div>
       <div className="text-right mt-4">
-        <Link href="/upload_cv/presentation">
-          <button
-            className="bg-[#FF6600] py-1 px-10 rounded-md text-white font-bold"
-            onClick={handleNextButtonClick}
-          >
-            Next
-          </button>
-        </Link>
+        <button
+          className="bg-[#FF6600] py-1 px-10 rounded-md text-white font-bold"
+          onClick={validator}
+        >
+          Next
+        </button>
       </div>
     </div>
   );

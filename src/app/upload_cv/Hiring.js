@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import HiringBg from "../../../../public/image/HiringBg.png";
-import HiringLogo from "../../../../public/image/HiringLogo.png";
+import HiringBg from "../../../public/image/HiringBg.png";
+import HiringLogo from "../../../public/image/HiringLogo.png";
 
 export default function Hiring() {
   return (

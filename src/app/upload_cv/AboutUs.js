@@ -1,6 +1,8 @@
-import Link from "next/link";
+export default function AboutUs(props) {
+  const nextPage = () => {
+    props.nextPage();
+  };
 
-export default function AboutUs() {
   return (
     <div className="w-[135%]   ml-20  ">
       <div className="mt-10 mb-2 font-black text-lg">1 of 3 Completed</div>
@@ -50,11 +52,12 @@ export default function AboutUs() {
       </div>
 
       <div className="text-right mt-4">
-        <Link href="/upload_cv/jobAplication">
-          <button className="bg-[#FF6600] py-1 px-10 rounded-md text-white font-bold">
-            Next
-          </button>
-        </Link>
+        <button
+          onClick={nextPage}
+          className="bg-[#FF6600] py-1 px-10 rounded-md text-white font-bold"
+        >
+          Next
+        </button>
       </div>
     </div>
   );
