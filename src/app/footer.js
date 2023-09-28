@@ -6,7 +6,9 @@ import { BsTelephoneFill, BsBuildingsFill } from "react-icons/bs";
 export default function Footer() {
   return (
     <div id="footer">
-      <div className={"sm:flex justify-evenly text-[#4D4D4D] font-medium"}>
+      <div
+        className={"sm:flex justify-evenly text-[#4D4D4D] font-medium mt-10"}
+      >
         <div>
           <Image src={Logo} className="pl-10 sm:pl-0 w-[350px] sm:w-[450px]" />
         </div>

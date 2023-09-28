@@ -12,7 +12,7 @@ export default function Content() {
   return (
     <div className="text-white relative">
       <div>
-        <div className="mx-6 absolute z-[1]">
+        <div className="mx-6 absolute z-[1] ">
           <p className="text-3xl sm:text-9xl sm:mt-32 mt-28 sm:mb-16 mb-10">
             YOUR
             <span className="text-[#EE8300]">
