@@ -14,7 +14,7 @@ export default function Presentation(props) {
     props.prevPage();
   };
   return (
-    <div className="w-[135%]   ml-20  text-[#4D4D4D] ">
+    <div className=" sm:mx-12 mx-6 sm:mb-0 mb-16 text-[#4D4D4D] ">
       <div className="mt-10 mb-2 font-black text-lg">3 of 3 Completed</div>
 
       <div className="bg-[#FF6600] w-full h-2 rounded-full"></div>
@@ -105,9 +105,9 @@ export default function Presentation(props) {
         <div className="mt-4 flex gap-2 justify-end">
           <button
             onClick={prevPage}
-            className="bg-[#FF6600] py-1 px-10 rounded-md text-white font-bold"
+            className="bg-white py-1 px-10 rounded-md text-black font-bold"
           >
-            Previus
+            Back
           </button>
 
           <button

@@ -1,7 +1,5 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { bebas_Neue } from "./fonts";
 
 export const metadata = {
   title: "Company Profile",
@@ -11,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={bebas_Neue.className}>{children}</body>
     </html>
   );
 }

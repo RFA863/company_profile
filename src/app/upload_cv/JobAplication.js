@@ -29,12 +29,16 @@ export default function JobAplication(props) {
     const { name, value, type, checked } = e.target;
     props.changeInput(name, value, type, checked);
   };
-
+  const prevPage = () => {
+    props.prevPage();
+  };
   return (
-    <div className="w-[135%]   ml-20  text-[#4D4D4D] ">
+    <div className="sm:mx-12 mx-6 sm:mb-0 mb-16 text-[#4D4D4D] ">
       <div className="mt-10 mb-2 font-black text-lg">2 of 3 Completed</div>
-      <div className="bg-white w-[135%] h-2 rounded-full absolute"></div>
-      <div className="bg-[#FF6600] w-[90%] h-2 rounded-full absolute z-[1]"></div>
+      <div className="relative">
+        <div className="bg-[#FF6600] w-2/3 h-2 rounded-full absolute z-[1]"></div>
+        <div className="bg-white w-full h-2 rounded-full "></div>
+      </div>
       <div className="font-black text-4xl mt-10">Job Application</div>
       <div className="text-md border-b-2 border-black pb-4">
         <div className="font-medium text-2xl mt-3 mb-6">Packaging Employee</div>
@@ -160,7 +164,13 @@ export default function JobAplication(props) {
           required
         />
       </div>
-      <div className="text-right mt-4">
+      <div className="mt-4 flex gap-2 justify-end">
+        <button
+          className="bg-white py-1 px-10 rounded-md text-black font-bold"
+          onClick={prevPage}
+        >
+          Back
+        </button>
         <button
           className="bg-[#FF6600] py-1 px-10 rounded-md text-white font-bold"
           onClick={validator}

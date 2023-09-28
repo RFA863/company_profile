@@ -4,13 +4,14 @@ export default function AboutUs(props) {
   };
 
   return (
-    <div className="w-[135%]   ml-20  ">
+    <div className="sm:mx-12 mx-6 sm:mb-0 mb-16  ">
       <div className="mt-10 mb-2 font-black text-lg">1 of 3 Completed</div>
-      <div className="bg-white w-[135%] h-2 rounded-full absolute"></div>
-      <div className="bg-[#FF6600] w-[45%] h-2 rounded-full absolute z-[1]"></div>
-
+      <div className="relative">
+        <div className="bg-[#FF6600] w-1/3 h-2 rounded-full absolute z-[1]"></div>
+        <div className="bg-[#FFFFFF] w-full h-2 rounded-full "></div>
+      </div>
       <div className="font-black text-4xl text-[#4D4D4D] mt-10">About Us</div>
-      <div className="text-md border-b-2 border-black pb-4">
+      <div className="text-md border-b-2 border-black pb-4 text-justify">
         <p>
           🌟 Why Choose Box Industries? 🌟 <br />
           📈 Innovation at its Best: Be part of a dynamic team that thrives on
