@@ -1,7 +1,6 @@
 import "./globals.css";
-import { Inter, Bebas_Neue } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+import { bebas_Neue } from "./fonts";
 
 const bebas_Neue = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 
