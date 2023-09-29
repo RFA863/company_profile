@@ -10,8 +10,9 @@ import Background_1 from "../../public/image/background_1.png";
 
 export default function Content() {
   return (
-    <div className="text-white relative">
+    <div className="text-white relative" id="content1">
       <div>
+
         <div className="mx-6 absolute z-[1] ">
           <div className="text-3xl sm:text-9xl sm:mt-32 mt-28 sm:mb-16 mb-10">
             YOUR {""}
@@ -39,6 +40,7 @@ export default function Content() {
         <Image
           src={Background_1}
           className=" object-cover h-screen   sm:w-screen sm:h-screen sm:bg-cover"
+
         />
       </div>
     </div>
