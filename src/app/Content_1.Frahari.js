@@ -13,13 +13,13 @@ export default function Content() {
     <div className="text-white relative">
       <div>
         <div className="mx-6 absolute z-[1] ">
-          <p className="text-3xl sm:text-9xl sm:mt-32 mt-28 sm:mb-16 mb-10">
-            YOUR
+          <div className="text-3xl sm:text-9xl sm:mt-32 mt-28 sm:mb-16 mb-10">
+            YOUR {""}
             <span className="text-[#EE8300]">
               GREAT PRODUCT <br />
             </span>
             DESERVED <span className="text-[#EE8300]">GOOD PACKAGING.</span>
-          </p>
+          </div>
 
           <p className=" text-justify sm:text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -32,9 +32,9 @@ export default function Content() {
             interdum est.
           </p>
 
-          <button className="bg-[#EE8300] sm:px-4  px-4 py-2 sm:text-2xl text:sm sm:mt-8 mt-16 rounded-lg">
+          {/* <button className="bg-[#EE8300] sm:px-4  px-4 py-2 sm:text-2xl text:sm sm:mt-8 mt-16 rounded-lg">
             LEARN MORE ABOUT US
-          </button>
+          </button> */}
         </div>
         <Image
           src={Background_1}

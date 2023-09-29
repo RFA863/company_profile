@@ -26,9 +26,9 @@ export default function Content_2Frahari() {
             interdum est.
           </p>
 
-          <button className="bg-[#EE8300] sm:px-6  py-2 px-6 sm:text-4xl text:2xl  mt-16 rounded-lg">
+          {/* <button className="bg-[#EE8300] sm:px-6  py-2 px-6 sm:text-4xl text:2xl  mt-16 rounded-lg">
             HISTORY
-          </button>
+          </button> */}
         </div>
         <Image
           src={Background_2}
