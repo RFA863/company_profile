@@ -1,9 +1,13 @@
 import "./globals.css";
-import { Inter, Bebas_Neue } from "next/font/google";
+// <<<<<<< staging
+// import { Inter, Bebas_Neue } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
-const bebas_Neue = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
+// const bebas_Neue = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
+// =======
+import { bebas_Neue } from "./fonts";
+// >>>>>>> staging
 
 export const metadata = {
   title: "Company Profile",

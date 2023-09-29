@@ -13,23 +13,45 @@ export default function Content() {
 
   return (
     <>
-      <div id="content4">
-        <Carousel
-          autoPlay={true}
-          infiniteLoop={true}
-          interval={3000}
-          showStatus={false}
-          // renderArrowNext={nextArrow}
-          // renderArrowPrev={prevArrow}
-        >
-          <div>
-            <Image src={Content4_1} className="sm:w-screen sm:h-screen" />
-          </div>
-          <div>
-            <Image src={Content3} className="sm:w-screen sm:h-screen" />
-          </div>
-        </Carousel>
-      </div>
+// <<<<<<< staging
+//       <div id="content4">
+//         <Carousel
+//           autoPlay={true}
+//           infiniteLoop={true}
+//           interval={3000}
+//           showStatus={false}
+//           // renderArrowNext={nextArrow}
+//           // renderArrowPrev={prevArrow}
+//         >
+//           <div>
+//             <Image src={Content4_1} className="sm:w-screen sm:h-screen" />
+//           </div>
+//           <div>
+//             <Image src={Content3} className="sm:w-screen sm:h-screen" />
+//           </div>
+//         </Carousel>
+//       </div>
+// =======
+      <Carousel
+        autoPlay={true}
+        infiniteLoop={true}
+        interval={3000}
+        showStatus={false}
+        showThumbs={false}
+        // renderArrowNext={nextArrow}
+        // renderArrowPrev={prevArrow}
+      >
+        <div>
+          <Image src={Content4_1} className="sm:w-screen sm:h-screen  " />
+        </div>
+        <div>
+          <Image src={Content3} className="sm:w-screen sm:h-screen " />
+        </div>
+        <div>
+          <Image src={Content3} className="sm:w-screen sm:h-screen " />
+        </div>
+      </Carousel>
+// >>>>>>> staging
     </>
   );
 }
