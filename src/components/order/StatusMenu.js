@@ -5,7 +5,7 @@ export default function StatusMenu({ model, dimension, material }) {
     const res = await fetch(process.env.NEXT_PUBLIC_HOST + "/price/check", {
       method: "POST",
       headers: {
-        "Accept": "*/*",
+        Accept: "*/*",
         "Content-Type": "application/json",
         "ngrok-skip-browser-warning": "true",
       },
@@ -15,9 +15,11 @@ export default function StatusMenu({ model, dimension, material }) {
         tinggi: Number(dimension.tinggi),
         bahan: material.type,
       }),
-    }).then((res) => {
-      console.log(res.json());
-    });
+    })
+      .then((res) => {
+        console.log(res.json());
+      })
+      .catch((err) => console.log(err));
   };
 
   return (

@@ -8,7 +8,7 @@ export default function Hiring() {
     <div className="relative">
       <div className="absolute z-[1] sm:top-20 top-12 text-white ">
         <div className="flex justify-center">
-          <Image src={HiringLogo} />
+          <Image src={HiringLogo} alt="Logo" />
         </div>
         <div className="text-center mt-28 mb-8 font-black text-4xl tracking-wide">
           WE ARE <span className="text-[#FF6600]">HIRING</span>
@@ -20,7 +20,7 @@ export default function Hiring() {
           high-quality packaging solutions that drive industries forward.
         </div>
       </div>
-      <Image src={HiringBg} className="h-screen  w-full " />
+      <Image src={HiringBg} alt="Background" className="h-screen  w-full " />
     </div>
   );
 }

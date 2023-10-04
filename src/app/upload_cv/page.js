@@ -21,7 +21,7 @@ export default function upload_cv() {
     gender: true,
     experience: "",
     tools_knowledge: "",
-    specialist: "",
+    specialist: [],
   });
 
   const nextPage = () => {
@@ -44,22 +44,20 @@ export default function upload_cv() {
   };
 
   const handleCheckboxChange = (id, checked) => {
-    const specialistArray = [...formData.specialist.split(",")];
+    let specialistArray = [...formData.specialist];
 
     if (checked) {
       specialistArray.push(id);
     } else {
-      const index = specialistArray.indexOf(id);
-      if (index !== -1) {
-        specialistArray.splice(index, 1);
-      }
+      specialistArray = specialistArray.filter(item => item !== id);
     }
 
     setFormData((prevData) => ({
       ...prevData,
-      specialist: specialistArray.join(","),
+      specialist: specialistArray,
     }));
   };
+
 
   const handleInputChange = (name, value, type, checked, files) => {
     // Jika input adalah tipe 'file', kita perlu mengambil base64 dari file yang diunggah
@@ -96,7 +94,7 @@ export default function upload_cv() {
   const validator = () => {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     let isChecked = false;
-
+    const phoneNumber = formData.phone.slice(0, 2);
     checkboxes.forEach((checkbox) => {
       if (checkbox.checked) {
         isChecked = true;
@@ -233,7 +231,20 @@ export default function upload_cv() {
           theme: "light",
         });
         return false;
-      } else if (formData.phone.length > 15) {
+      } else if (phoneNumber !== "62") {
+        toast.error("The phone number is not correct", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        return false;
+      }
+      else if (formData.phone.length > 15) {
         toast.error("The phone number must not exceed 15 characters.", {
           position: "top-center",
           autoClose: 3000,
@@ -265,13 +276,16 @@ export default function upload_cv() {
 
   const handleSubmit = async () => {
     try {
-      const res = await fetch("http://localhost:5000/applicants/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      }).then((res) => res.json());
+      const res = await fetch(
+        process.env.NEXT_PUBLIC_HOST + "/applicants/submit",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      ).then((res) => res.json());
       console.log(res);
       if (res.status === 200) {
         // Handle success, e.g., redirect to a thank you page
@@ -343,6 +357,7 @@ export default function upload_cv() {
       console.error("Error while making POST request:", error);
     }
   };
+
 
   return (
     <main>

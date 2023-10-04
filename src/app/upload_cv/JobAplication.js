@@ -65,17 +65,17 @@ export default function JobAplication(props) {
           <div className="basis-1/3 flex items-center">
             <input
               type="checkbox"
-              id="packagingSpecialist"
+              id="Packaging Specialist"
               checked={props.formData.specialist.includes(
-                "packagingSpecialist"
+                "Packaging Specialist"
               )}
               onChange={(e) =>
-                handleCheckboxChange("packagingSpecialist", e.target.checked)
+                handleCheckboxChange("Packaging Specialist", e.target.checked)
               }
               className="w-8 h-8 bg-[#FF6600] border rounded-md focus:ring-0"
               required
             />
-            <label htmlFor="packagingSpecialist" className="pl-4">
+            <label htmlFor="Packaging Specialist" className="pl-4">
               Packaging Design Specialist
             </label>
           </div>
@@ -83,20 +83,20 @@ export default function JobAplication(props) {
           <div className="basis-1/3 flex items-center">
             <input
               type="checkbox"
-              id="qualityControlInspector"
+              id="Quality Control Inspector"
               checked={props.formData.specialist.includes(
-                "qualityControlInspector"
+                "Quality Control Inspector"
               )}
               onChange={(e) =>
                 handleCheckboxChange(
-                  "qualityControlInspector",
+                  "Quality Control Inspector",
                   e.target.checked
                 )
               }
               className="w-8 h-8 bg-[#FF6600] border rounded-md focus:ring-0"
               required
             />
-            <label htmlFor="qualityControlInspector" className="pl-4">
+            <label htmlFor="Quality Control Inspector" className="pl-4">
               Quality Control Inspector
             </label>
           </div>
@@ -104,15 +104,15 @@ export default function JobAplication(props) {
           <div className="basis-1/3 flex items-center">
             <input
               type="checkbox"
-              id="salesManager"
-              checked={props.formData.specialist.includes("salesManager")}
+              id="Sales Manager"
+              checked={props.formData.specialist.includes("Sales Manager")}
               onChange={(e) =>
-                handleCheckboxChange("salesManager", e.target.checked)
+                handleCheckboxChange("Sales Manager", e.target.checked)
               }
               className="w-8 h-8 bg-[#FF6600] border rounded-md focus:ring-0"
               required
             />
-            <label htmlFor="salesManager" className="pl-4">
+            <label htmlFor="Sales Manager" className="pl-4">
               Sales and Business Development Manager
             </label>
           </div>
@@ -120,17 +120,17 @@ export default function JobAplication(props) {
           <div className="basis-1/3 flex items-center">
             <input
               type="checkbox"
-              id="productionSupervisor"
+              id="Production Supervisor"
               checked={props.formData.specialist.includes(
-                "productionSupervisor"
+                "Production Supervisor"
               )}
               onChange={(e) =>
-                handleCheckboxChange("productionSupervisor", e.target.checked)
+                handleCheckboxChange("Production Supervisor", e.target.checked)
               }
               className="w-8 h-8 bg-[#FF6600] border rounded-md focus:ring-0"
               required
             />
-            <label htmlFor="productionSupervisor" className="pl-4">
+            <label htmlFor="Production Supervisor" className="pl-4">
               Production Line Supervisor
             </label>
           </div>
@@ -138,15 +138,15 @@ export default function JobAplication(props) {
           <div className="basis-1/3 flex items-center">
             <input
               type="checkbox"
-              id="supplyCoordinator"
-              checked={props.formData.specialist.includes("supplyCoordinator")}
+              id="Supply Coordinator"
+              checked={props.formData.specialist.includes("Supply Coordinator")}
               onChange={(e) =>
-                handleCheckboxChange("supplyCoordinator", e.target.checked)
+                handleCheckboxChange("Supply Coordinator", e.target.checked)
               }
               className="w-8 h-8 bg-[#FF6600] border rounded-md focus:ring-0"
               required
             />
-            <label htmlFor="supplyCoordinator" className="pl-4">
+            <label htmlFor="Supply Coordinator" className="pl-4">
               Supply Chain Coordinator
             </label>
           </div>

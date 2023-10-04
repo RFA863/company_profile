@@ -60,7 +60,7 @@ export default function Presentation(props) {
               name="phone"
               value={props.formData.phone}
               onChange={handleInputChange}
-              placeholder="Ex. +62 12345678"
+              placeholder="Ex. 6212345678"
               className="w-full rounded-md bg-[#D9D9D9] relative"
             />
           </div>
