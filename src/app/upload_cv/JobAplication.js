@@ -62,7 +62,7 @@ export default function JobAplication(props) {
         </div>
 
         <div className="flex  flex-wrap items-center">
-          <div className="basis-1/3 flex items-center">
+          <div className="sm:basis-1/3 basis-1/2 flex items-center">
             <input
               type="checkbox"
               id="Packaging Specialist"
@@ -80,7 +80,7 @@ export default function JobAplication(props) {
             </label>
           </div>
 
-          <div className="basis-1/3 flex items-center">
+          <div className="sm:basis-1/3 basis-1/2  flex items-center">
             <input
               type="checkbox"
               id="Quality Control Inspector"
@@ -101,7 +101,7 @@ export default function JobAplication(props) {
             </label>
           </div>
 
-          <div className="basis-1/3 flex items-center">
+          <div className="sm:basis-1/3 basis-1/2 flex items-center">
             <input
               type="checkbox"
               id="Sales Manager"
@@ -117,7 +117,7 @@ export default function JobAplication(props) {
             </label>
           </div>
 
-          <div className="basis-1/3 flex items-center">
+          <div className="sm:basis-1/3 basis-1/2  flex items-center">
             <input
               type="checkbox"
               id="Production Supervisor"
@@ -135,7 +135,7 @@ export default function JobAplication(props) {
             </label>
           </div>
 
-          <div className="basis-1/3 flex items-center">
+          <div className="sm:basis-1/3 basis-1/2  flex items-center">
             <input
               type="checkbox"
               id="Supply Coordinator"
@@ -166,13 +166,13 @@ export default function JobAplication(props) {
       </div>
       <div className="mt-4 flex gap-2 justify-end">
         <button
-          className="bg-white py-1 px-10 rounded-md text-black font-bold"
+          className="bg-white py-1 px-10 rounded-md text-black font-bold hover:bg-[#B0B0B0] hover:text-[#333333]"
           onClick={prevPage}
         >
           Back
         </button>
         <button
-          className="bg-[#FF6600] py-1 px-10 rounded-md text-white font-bold"
+          className="bg-[#FF6600] py-1 px-10 rounded-md text-white font-bold hover:bg-[#FF9900] hover:text-[#CCCCCC]"
           onClick={validator}
         >
           Next

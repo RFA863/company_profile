@@ -3,7 +3,7 @@ import Select from "react-select";
 import { useState } from "react";
 
 import FourFlap from "../../../public/image/4flap.jpg";
-import Overlap from "../../../public/image/overlap.jpg";
+import Overlap from "../../../public/image/Overlap.jpg";
 import TelescopeBox from "../../../public/image/telescopebox.jpeg";
 
 export default function ContentModel({ nextHandler, model, setModel }) {

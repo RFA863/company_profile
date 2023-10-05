@@ -1,12 +1,11 @@
-"use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import Content3 from "../../public/image/Content3.png";
-import { useRouter } from "next/navigation";
+
 // import Dummy from "../../public/image/dummy.png";
 
 export default function Content() {
-  const router = useRouter();
 
   return (
     <div className="relative" id="content3">
@@ -24,12 +23,13 @@ export default function Content() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
               pretium purus placerat ipsum viverra volutpat.
             </div>
-            <button
-              className="text-center text-xl sm:text-4xl text-[#EEEEEE] bg-[#EE8300] rounded sm:rounded-lg p-1 sm:p-4  w-24 sm:w-40"
-              onClick={() => scrollToSection("footer")}
-            >
-              ORDER NOW
-            </button>
+            <Link href="/order">
+              <button
+                className="text-center text-xl sm:text-4xl text-[#EEEEEE] bg-[#EE8300] rounded sm:rounded-lg p-1 sm:p-4  w-24 sm:w-40 hover:bg-[#D57200]"
+              >
+                ORDER NOW
+              </button>
+            </Link>
           </div>
         </div>
         {/* </div>

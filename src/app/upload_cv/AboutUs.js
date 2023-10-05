@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function AboutUs(props) {
   const nextPage = () => {
     props.nextPage();
@@ -52,10 +54,18 @@ export default function AboutUs(props) {
         </p>
       </div>
 
-      <div className="text-right mt-4">
+      <div className="mt-4 flex gap-2 justify-end">
+        <Link href="/#">
+          <button
+            className="bg-white py-1 px-10 rounded-md text-black font-bold hover:bg-[#B0B0B0] hover:text-[#333333]"
+
+          >
+            Home
+          </button>
+        </Link>
         <button
           onClick={nextPage}
-          className="bg-[#FF6600] py-1 px-10 rounded-md text-white font-bold"
+          className="bg-[#FF6600] py-1 px-10 rounded-md text-white font-bold hover:bg-[#FF9900] hover:text-[#CCCCCC]"
         >
           Next
         </button>

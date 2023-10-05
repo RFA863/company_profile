@@ -53,7 +53,7 @@ export default function Presentation(props) {
           </div>
           <div>
             <span className="absolute z-[1] mx-2 text-sm -translate-y-3 bg-[#D9D9D9]">
-              Phone
+              Phone (WhatsApp Number)
             </span>
             <input
               type="tel"
@@ -105,7 +105,7 @@ export default function Presentation(props) {
         <div className="mt-4 flex gap-2 justify-end">
           <button
             onClick={prevPage}
-            className="bg-white py-1 px-10 rounded-md text-black font-bold"
+            className="bg-white py-1 px-10 rounded-md text-black font-bold hover:bg-[#B0B0B0] hover:text-[#333333]"
           >
             Back
           </button>
@@ -113,7 +113,7 @@ export default function Presentation(props) {
           <button
             type="submit"
             onClick={handleSubmit}
-            className="bg-[#FF6600] py-1 px-10 rounded-md text-white font-bold"
+            className="bg-[#FF6600] py-1 px-10 rounded-md text-white font-bold hover:bg-[#FF9900] hover:text-[#CCCCCC]"
           >
             Finish
           </button>
