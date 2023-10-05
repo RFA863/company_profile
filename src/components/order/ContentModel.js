@@ -5,6 +5,7 @@ import { useState } from "react";
 import FourFlap from "../../../public/image/4flap.jpg";
 import Overlap from "../../../public/image/Overlap.jpg";
 import TelescopeBox from "../../../public/image/telescopebox.jpeg";
+import Custom from "../../../public/image/Custom.jpg";
 
 export default function ContentModel({ nextHandler, model, setModel }) {
   const productDesc = {
@@ -46,6 +47,17 @@ export default function ContentModel({ nextHandler, model, setModel }) {
         </p>
       </div>
     ),
+    Custom: (
+      <div>
+        <p>
+          Experience the freedom of customization with our personalized box
+          packaging services. At Cahaya Terang Box, we empower our
+          users/customers to order box packaging that aligns perfectly with
+          their unique preferences and needs. Choose the size, shape, and design
+          that suits your product.
+        </p>
+      </div>
+    ),
   };
   const [desc, setDesc] = useState(productDesc.FourFlap);
 
@@ -53,6 +65,7 @@ export default function ContentModel({ nextHandler, model, setModel }) {
     { value: "1", label: "4 Flap" },
     { value: "2", label: "Overlap" },
     { value: "3", label: "Telescope Box" },
+    { value: "4", label: "Custom" },
   ];
 
   const handleSelectChange = (selectedOptions) => {
@@ -81,6 +94,13 @@ export default function ContentModel({ nextHandler, model, setModel }) {
           type: selectedOptions.label,
         });
         break;
+      case "Custom":
+        setDesc(productDesc.Custom);
+        setModel({
+          image: Custom,
+          value: "4",
+          type: selectedOptions.label,
+        });
     }
   };
 
