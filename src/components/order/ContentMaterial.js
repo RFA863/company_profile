@@ -148,14 +148,6 @@ export default function ContentMaterial({
           <div className="text-xl">{desc}</div>
         </div>
       </div>
-      <div className="flex justify-end border-t border-[#4D4D4D]">
-        <button
-          onClick={nextHandler}
-          className="text-center text-2xl text-[#EEEEEE] bg-[#EE8300] rounded-lg px-20 py-1 mt-10"
-        >
-          SELANJUTNYA
-        </button>
-      </div>
     </div>
   );
 }
