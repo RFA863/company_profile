@@ -11,8 +11,8 @@ export default function Content() {
     <div className="relative" id="content3">
       <div>
         <div className="flex absolute z-[1] mt-24 sm:mt-44">
-          <div className="basis-1/2"></div>
-          <div className="flex flex-col basis-1/2 gap-0.5 sm:gap-6">
+          <div className="sm:basis-1/2 basis-0"></div>
+          <div className="flex flex-col sm:basis-1/2 basis-1 gap-0.5 sm:gap-6">
             <div className="text-4xl sm:text-9xl text-[#EEEEEE]">
               MAKE TO ORDER
             </div>

@@ -3,7 +3,7 @@ import "./globals.css";
 import { bebas_Neue } from "./fonts";
 
 export const metadata = {
-  title: "Company Profile",
+  title: "Cahaya Terang",
   description: "CV. Cahaya Terang Company Profile ",
 };
 
