@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "./header";
 
 import Content3 from "./content3";
@@ -7,8 +9,6 @@ import Content4 from "./content4";
 import Content_1Frahari from "./Content_1.Frahari";
 import Content_2Frahari from "./Content_2.Frahari";
 
-
-
 export default function Home() {
   return (
     <main>
@@ -17,11 +17,7 @@ export default function Home() {
       <Content_2Frahari />
       <Content3 />
       <Content4 />
-    <Footer />
-
-      
-  
-
+      <Footer />
     </main>
   );
 }

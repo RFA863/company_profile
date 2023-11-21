@@ -1,20 +1,52 @@
+"use client";
+
+import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/image/Logo.png";
 import { IoIosMail } from "react-icons/io";
 import { BsTelephoneFill, BsBuildingsFill } from "react-icons/bs";
 
 export default function Footer() {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: "smooth" });
+  };
   return (
-    <div id="footer">
-      <div className={"sm:flex justify-evenly text-[#4D4D4D] font-medium"}>
+    <div id="footer" data-aos="flip-up" data-aos-duration="500">
+      <div
+        className={"sm:flex justify-evenly text-[#4D4D4D] font-medium mt-10"}
+      >
         <div>
           <Image src={Logo} className="pl-10 sm:pl-0 w-[350px] sm:w-[450px]" />
         </div>
         <div className="flex flex:row sm:flex-col justify-center sm:justify-normal gap-10 sm:gap-0 leading-7 sm:leading-10 font-medium text-base sm:text-3xl">
-          <button className="text-justify">HOME</button>
-          <button className="text-justify">ABOUT</button>
-          <button className="text-justify">SERVICE</button>
-          <button className="text-justify">PRODUCT</button>
+          <button
+            onClick={() => scrollToSection("content1")}
+            className="text-justify hover:opacity-50"
+          >
+            HOME
+          </button>
+          <button
+            onClick={() => scrollToSection("content2")}
+            className="text-justify hover:opacity-50"
+          >
+            ABOUT
+          </button>
+          <button
+            onClick={() => scrollToSection("content3")}
+            className="text-justify hover:opacity-50"
+          >
+            SERVICE
+          </button>
+          <button
+            onClick={() => scrollToSection("content4")}
+            className="text-justify hover:opacity-50"
+          >
+            PRODUCT
+          </button>
+          <Link href="/upload_cv">
+            <button className="text-justify hover:opacity-50">HIRING</button>
+          </Link>
         </div>
         <div className="leading-7 sm:leading-10">
           <div className="flex justify-center sm:justify-normal text-base sm:text-3xl pt-5 sm:pt-0">
@@ -25,7 +57,12 @@ export default function Footer() {
               <div>
                 <IoIosMail className={"text-base sm:text-2xl text-[#EE8300]"} />
               </div>
-              <div className="text-sm sm:text-xl">
+              <div
+                className="text-sm sm:text-xl cursor-pointer"
+                onClick={() =>
+                  window.open("mailto:cahayaterangbox_57@yahoo.com")
+                }
+              >
                 CAHAYATERANGBOX_57@YAHOO.COM
               </div>
             </div>
@@ -46,7 +83,14 @@ export default function Footer() {
                   className={"text-sm sm:text-xl text-[#EE8300]"}
                 />
               </div>
-              <div className="text-sm sm:text-xl">
+              <div
+                className="text-sm sm:text-xl cursor-pointer"
+                onClick={() =>
+                  window.open(
+                    "https://www.google.com/maps/dir//cahaya+terang+bix/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x2e68ef6731997997:0xb9da344b1c26b338?sa=X&ved=2ahUKEwi7zKXqhuGBAxXW6KACHb2gAuQQ9Rd6BAhJEAA&ved=2ahUKEwi7zKXqhuGBAxXW6KACHb2gAuQQ9Rd6BAhZEAQ"
+                  )
+                }
+              >
                 JL. CIBOLERANG NO.203 KAV 20A BABAKAN CIPARAY,
                 <br />
                 BANDUNG WEST JAVA-INDONESIA 40174
