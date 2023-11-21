@@ -13,7 +13,7 @@ export default function Content() {
 
   return (
     <>
-      <div id="content4">
+      <div className="relative" id="content4">
         <Carousel
           autoPlay={true}
           infiniteLoop={true}
