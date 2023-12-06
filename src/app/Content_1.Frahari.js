@@ -11,7 +11,7 @@ import { Parallax } from "react-scroll-parallax";
 
 export default function Content() {
   return (
-    <div className="text-white relative" id="content1">
+    <div className="text-white relative select-none" id="content1">
       <Parallax translateY={[-50, 50]}>
         <div
           className="mx-6 absolute z-[1]"
@@ -44,7 +44,8 @@ export default function Content() {
         </div>
         <Image
           src={Background_1}
-          className=" object-cover h-screen   sm:w-screen sm:h-screen sm:bg-cover"
+          className=" object-cover h-screen sm:w-screen sm:h-screen sm:bg-cover"
+          alt="bg-content1"
         />
       </Parallax>
     </div>

@@ -16,10 +16,14 @@ export default function Footer() {
       <div
         className={"sm:flex justify-evenly text-[#4D4D4D] font-medium mt-10"}
       >
-        <div>
-          <Image src={Logo} className="pl-10 sm:pl-0 w-[350px] sm:w-[450px]" />
+        <div className="flex items-center">
+          <Image
+            src={Logo}
+            className="pl-10 sm:pl-0 w-[245px] sm:w-[345px]"
+            alt="logo"
+          />
         </div>
-        <div className="flex flex:row sm:flex-col justify-center sm:justify-normal gap-10 sm:gap-0 leading-7 sm:leading-10 font-medium text-base sm:text-3xl">
+        <div className="flex flex:row sm:flex-col justify-center sm:justify-normal gap-10 sm:gap-0 leading-7 sm:leading-10 font-medium text-base sm:text-3xl items-center">
           <button
             onClick={() => scrollToSection("content1")}
             className="text-justify hover:opacity-50"
@@ -99,11 +103,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex justify-between mt-10 px-10 py-6 border-t-2 border-[#4D4D4D]">
-        <div className="text-xs sm:text-base">© 2023, All Rights Reserved</div>
-        <div className="flex justify-between gap-5 sm:gap-10">
-          <div className="text-xs sm:text-base">Privacy Policy</div>
-          <div className="text-xs sm:text-base">Terms Of Use</div>
+      <div className="flex justify-center mt-10 px-10 py-6 border-t-2 border-[#4D4D4D]">
+        <div className="text-xs sm:text-base selec-none">
+          © 2023, All Rights Reserved
         </div>
       </div>
     </div>
