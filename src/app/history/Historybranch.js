@@ -44,7 +44,10 @@ export default function Historybranch() {
           <div className="relative -top-1 w-5 h-5 rounded-full bg-white"></div>
           {
             cardData.map((item, index) => (
-              <div className={`w-5 h-5 rounded-full ${color[item.colorIndex]}`}></div>
+              <div
+                key={"dot"+index}
+                className={`w-5 h-5 rounded-full ${color[item.colorIndex]}`}
+              ></div>
             ))
           }
           <div className="relative -bottom-1 w-5 h-5 rounded-full bg-white"></div>
