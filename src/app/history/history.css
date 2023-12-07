@@ -1,0 +1,27 @@
+.corner-border::before,
+.corner-border::after {
+  position: absolute;
+  width: 180px;
+  height: 75px;
+  content: "";
+}
+
+.corner-border::before {
+  left: 0;
+  top: 0;
+  border-top-left-radius: 12px;
+  border-left-style: solid;
+  border-left-width: 4px;
+  border-top-style: solid;
+  border-top-width: 4px;
+}
+
+.corner-border::after {
+  right: 0;
+  bottom: 0;
+  border-bottom-right-radius: 12px;
+  border-right-style: solid;
+  border-right-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+}
