@@ -27,7 +27,7 @@ export default function Content_2Frahari() {
           <span className="text-justify text-xl sm:text-4xl">{text}</span>
           <div>
             <Link href="/history">
-              <button className="text-center text-xl sm:text-4xl text-[#EEEEEE] bg-[#EE8300] rounded sm:rounded-lg p-1 sm:p-4 w-24 sm:w-40 hover:bg-[#D57200] mt-2">
+              <button className="text-center text-xl sm:text-4xl text-[#EEEEEE] bg-[#EE8300] rounded sm:rounded-lg p-1 sm:p-3 w-24 sm:w-40 hover:bg-[#D57200] mt-2">
                 HISTORY
               </button>
             </Link>
