@@ -47,11 +47,14 @@ export default function Historybranch() {
       <div className="relative z-10 flex justify-center">
         <div className="absolute bg-white h-full w-[6px] flex flex-col justify-between items-center">
           <div className="relative -top-1 w-5 h-5 rounded-full bg-white"></div>
-          {cardData.map((item, index) => (
-            <div
-              className={`w-5 h-5 rounded-full ${color[item.colorIndex]}`}
-            ></div>
-          ))}
+          {
+            cardData.map((item, index) => (
+              <div
+                key={"dot"+index}
+                className={`w-5 h-5 rounded-full ${color[item.colorIndex]}`}
+              ></div>
+            ))
+          }
           <div className="relative -bottom-1 w-5 h-5 rounded-full bg-white"></div>
         </div>
         <div className="flex flex-col py-8">
