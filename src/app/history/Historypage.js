@@ -1,63 +1,39 @@
 import Image from "next/image";
 import Background_2 from "../../../public/image/background_2.png";
-import { Parallax } from "react-scroll-parallax";
 
 export default function Historypage() {
+
+  const missionData = [
+    <p>"To be a committed and reliable customer partner in providing the best service across all aspects of customer satisfaction ."</p>,
+    <p>"Creating a harmonious work atmosphere that balances productivity optimization and comfort, with a focus on the well-being of all elements of the company."</p>,
+    <p>"Maximizing the implementation of risk, operational, marketing, financial, human resources, technology, and information management in a synergistic and comprehensive manner."</p>,
+    <p>"Applying the principles of prudence in every decision-making process and good corporate governance."</p>,
+  ]
+
   return (
-    <div className="text-white relative select-none" id="content2">
-      <Parallax translateY={[-50, 50]}>
-        <div>
-          <div className="mx-6 absolute z-[1]" data-aos="zoom-in-right">
-            <p className="text-[#EE8300] text-4xl sm:text-9xl sm:mt-32 mt-20 sm:mb-8 mb-8">
-              VISION & MISSION
-              {/* <span className="text-[#EE8300]">
-                <br />
-              </span>
-              <span className="text-[#EE8300]">MISI</span> */}
-            </p>
-            <span className="text-justify text-xl sm:text-4xl">Vision:</span>
-            <br></br>
-            <span className="text-justify text-xl sm:text-4xl">
-              To become the forefront of printing innovation, empowering
-              businesses with unparalleled printing solutions that inspire
-              excellence and drive success.
-            </span>
-            <br></br>
-            <br></br>
-            <span className="text-justify text-xl sm:text-4xl">Mission: </span>
-            <td className="text-justify text-xl sm:text-3xl">
-              <tr>
-                <span className="text-[#EE8300]">
-                  Excellence in Craftsmanship:{" "}
-                </span>
-                We strive to deliver superior quality in every print, leveraging
-                advanced technology and expertise to exceed industry standards.
-              </tr>
-              <tr>
-                <span className="text-[#EE8300]">
-                  Client-Centric Approach:{" "}
-                </span>
-                Our commitment lies in understanding and fulfilling our clients'
-                unique printing needs, offering tailored solutions that foster
-                long-term partnerships.
-              </tr>
-              <tr>
-                <span className="text-[#EE8300]">
-                  Innovation and Adaptability:{" "}
-                </span>
-                We embrace innovation and continuously explore cutting-edge
-                printing technologies, ensuring our services remain at the
-                forefront of industry advancements.
-              </tr>
-            </td>
-          </div>
-          <Image
-            src={Background_2}
-            className=" object-cover h-screen  sm:w-screen sm:h-screen sm:bg-cover"
-            alt="bg-content2"
-          />
+    <div className="relative w-screen h-screen flex items-center select-none py-20 px-6" id="content2">
+      <Image
+        src={Background_2}
+        className="absolute -z-10 top-0 left-0 brightness-50 object-cover h-screen sm:w-screen sm:h-screen sm:bg-cover"
+        alt="bg-content2"
+      />
+      <div className="flex flex-col gap-3 tracking-wider">
+        <h1 className="text-3xl sm:text-9xl text-[#EE8300]">VISSION <span className="text-white">AND</span> MISSION</h1>
+        <div className="max-w-[1248px] flex flex-col bg-[#EE8300] text-white p-4 rounded-md drop-shadow-xl">
+          <h2 className="text-2xl">VISSION</h2>
+          <p className="text-xl">To be a credible company in the packaging manufacturing industry that emphasizes sustainable development, customer satisfaction, and the well-being of stakeholders through good corporate governance and commitment to social responsibility.</p>
         </div>
-      </Parallax>
+        <div className="flex gap-4">
+          {
+            missionData.map((item, index) => (
+              <div key={index} className="bg-[#645954] w-[300px] min-h-[240px] p-4 flex flex-col text-white text-xl rounded-md">
+                <h2>MISSION {index+1}</h2>
+                {item}
+              </div>
+            ))
+          }
+        </div>
+      </div>
     </div>
   );
 }
