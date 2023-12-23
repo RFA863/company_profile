@@ -35,7 +35,7 @@ export default function Content3New() {
       <Image
         alt="bg-content3"
         src={Content3}
-        className="absolute top-0 left-0 -z-[1] w-full h-full object-cover object-left "
+        className="absolute top-0 left-0 -z-[1] w-full h-full object-cover object-left brightness-90"
       />
     </div>
   );

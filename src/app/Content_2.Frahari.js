@@ -6,12 +6,12 @@ import Background_2 from "../../public/image/background_2.png";
 import { useTypewriter } from "react-simple-typewriter";
 
 export default function Content_2Frahari() {
-  const [text] = useTypewriter({
-    words: [
-      "With over 10 years of experience, we have dedicated ourselves to providing the best packaging and meet our customer expectations.",
-    ],
-    typeSpeed: 30,
-  });
+  // const [text] = useTypewriter({
+  //   words: [
+  //     "With over 10 years of experience, we have dedicated ourselves to providing the best packaging and meet our customer expectations.",
+  //   ],
+  //   typeSpeed: 30,
+  // });
 
   return (
     <div className="text-white relative select-none" id="content2">
@@ -24,7 +24,10 @@ export default function Content_2Frahari() {
             </span>
             <span className="text-[#EE8300]">FOR YEARS.</span>
           </p>
-          <span className="text-justify text-xl sm:text-4xl">{text}</span>
+          <span className="text-justify text-xl sm:text-4xl">
+            With over 10 years of experience, we have dedicated ourselves to
+            providing the best packaging and meet our customer expectations.
+          </span>
           <div>
             <Link href="/history">
               <button className="text-center text-xl sm:text-4xl text-[#EEEEEE] bg-[#EE8300] rounded sm:rounded-lg p-1 sm:p-3 w-24 sm:w-40 hover:bg-[#D57200] mt-2">
@@ -35,7 +38,7 @@ export default function Content_2Frahari() {
         </div>
         <Image
           src={Background_2}
-          className=" object-cover h-screen  sm:w-screen sm:h-screen sm:bg-cover"
+          className=" object-cover h-screen  sm:w-screen sm:h-screen sm:bg-cover brightness-75"
           alt="bg-content2"
         />
       </div>

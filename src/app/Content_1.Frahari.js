@@ -4,10 +4,10 @@ import Image from "next/image";
 import Background_1 from "../../public/image/background_1.png";
 import { Parallax } from "react-scroll-parallax";
 
-// const scrollToSection = (id) => {
-//   const element = document.getElementById(id);
-//   element.scrollIntoView({ behavior: "smooth" });
-// };
+const scrollToSection = (id) => {
+  const element = document.getElementById(id);
+  element.scrollIntoView({ behavior: "smooth" });
+};
 
 export default function Content() {
   return (
@@ -26,7 +26,7 @@ export default function Content() {
             DESERVED <span className="text-[#EE8300]">BETTER PACKAGING.</span>
           </div>
 
-          <p className=" text-justify text-xl sm:text-2xl">
+          <p className=" text-justify text-xl sm:text-3xl">
             Cahaya Terang Box is your reliable partner for high-quality
             cardboard printing. We deliver the best quality in every cardboard
             product we produce. High-quality materials and advanced production
@@ -37,14 +37,10 @@ export default function Content() {
             various volumes. From small to large, we are ready to serve your
             needs.
           </p>
-
-          {/* <button className="bg-[#EE8300] sm:px-4  px-4 py-2 sm:text-2xl text:sm sm:mt-8 mt-16 rounded-lg">
-            LEARN MORE ABOUT US
-          </button> */}
         </div>
         <Image
           src={Background_1}
-          className=" object-cover h-screen sm:w-screen sm:h-screen sm:bg-cover"
+          className=" object-cover h-screen sm:w-screen sm:h-screen sm:bg-cover brightness-75"
           alt="bg-content1"
         />
       </Parallax>
