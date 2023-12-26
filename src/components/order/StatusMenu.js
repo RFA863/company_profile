@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { BsWhatsapp } from "react-icons/bs";
 
@@ -138,9 +139,11 @@ export default function StatusMenu({ model, dimension, material }) {
         <BsWhatsapp className="w-5 h-5" />
         <p>PESAN</p>
       </button>
-      <button className="text-center text-2xl text-[#4D4D4D] bg-[#EEEEEE] rounded-lg py-2 mt-5">
-        KEMBALI KE HALAMAN UTAMA
-      </button>
+      <Link href="/.">
+        <button className="text-center text-2xl text-[#4D4D4D] bg-[#EEEEEE] rounded-lg py-2 px-5 mt-5">
+          KEMBALI KE HALAMAN UTAMA
+        </button>
+      </Link>
       <ToastContainer
         position="top-right"
         autoClose={5000}

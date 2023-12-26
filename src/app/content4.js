@@ -13,7 +13,7 @@ export default function Content() {
 
   return (
     <>
-      <div id="content4">
+      <div className="relative select-none" id="content4">
         <Carousel
           autoPlay={true}
           infiniteLoop={true}
@@ -24,13 +24,25 @@ export default function Content() {
           // renderArrowPrev={prevArrow}
         >
           <div>
-            <Image src={Content4_1} className="sm:w-screen sm:h-screen  " />
+            <Image
+              src={Content4_1}
+              className="sm:w-screen sm:h-screen"
+              alt="carrousel-1"
+            />
           </div>
           <div>
-            <Image src={Content3} className="sm:w-screen sm:h-screen " />
+            <Image
+              src={Content3}
+              className="sm:w-screen sm:h-screen"
+              alt="carrousel-2"
+            />
           </div>
           <div>
-            <Image src={Content3} className="sm:w-screen sm:h-screen " />
+            <Image
+              src={Content3}
+              className="sm:w-screen sm:h-screen"
+              alt="carrousel-2"
+            />
           </div>
         </Carousel>
       </div>
