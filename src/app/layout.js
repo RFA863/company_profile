@@ -1,17 +1,29 @@
-import "./globals.css";
-import { Inter } from "next/font/google";
+"use client";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { bebas_Neue } from "./fonts";
+import { useLayoutEffect } from "react";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 export const metadata = {
-  title: "Company Profile",
+  title: "Cahaya Terang",
   description: "CV. Cahaya Terang Company Profile ",
 };
 
 export default function RootLayout({ children }) {
+  useLayoutEffect(() => {
+    AOS.init({
+      once: false,
+      mirror: true,
+    });
+  }, []);
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${bebas_Neue.className} overflow-x-hidden`}>
+        <ParallaxProvider>{children}</ParallaxProvider>
+      </body>
     </html>
   );
 }
