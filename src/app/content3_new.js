@@ -25,11 +25,11 @@ export default function Content3New() {
             </h4>
             <h4>Click the button bellow to check estimated pricing!</h4>
           </div>
-          <Link href="/order">
+          {/* <Link href="/order">
             <button className="text-center text-xl sm:text-4xl text-[#EEEEEE] bg-[#EE8300] rounded sm:rounded-lg p-1 sm:p-4 w-24 sm:w-40 hover:bg-[#D57200] mt-2">
               ORDER NOW
             </button>
-          </Link>
+          </Link> */}
         </div>
       </div>
       <Image
